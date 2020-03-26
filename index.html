@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<!-- Meta data -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>MIND | Dajiang Zhu, Ph.D.</title>
+	<link rel="stylesheet" type="text/css" href="home_style.css">
+	
+	<!-- Contains all transition and animation functions -->
+	<script src="functions.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/43545c9b22.js" crossorigin="anonymous"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+	<script src="dbConfig.js"></script>
+</head>
+<body>
+	<!-- Sidebar -->
+	<div id="MainSidebar" class="MainSidebar">
+		<div class="MenuAppearButton" onclick="OpenMainMenu()">
+			<div id="Bar" class="Bar"></div>
+		</div>
+	</div>
+
+	<!-- Main Menu -->
+	<div id="MainMenu" class="MainMenu">
+		<p class="Title">MIND</p>
+		<p class="Owner">Dajiang Zhu, Ph.D.</p>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#TeamWrapper">Our Team</a></li>
+			<li><a href="#">Publications</a></li>
+			<li><a href="#">Lab Stories</a></li>
+		</ul>
+	</div>
+	<!-- // Main Menu -->
+	
+	<!-- Main Wrapper -->
+	<div id="MainWrapper" class="MainWrapper">
+		<div id="TextWrapper" class="TextWrapper">
+			<div class="Director">
+				<img src="http://ranger.uta.edu/~zhu/images/demo/people/pic_djzhu.png"/>
+				<div class="nameDisp">
+					<h1>Director of MIND</h1>
+					<h2 class="name">Dajiang Zhu, Ph.D.</h2>
+					<p class="disp">
+						Dajiang Zhu is an Assistant Professor in the Computer Science and Engineering department at the University of Texas at Arlington.
+						He obtained B.S degrees in Computer Science from Shanghai Jiaotong University, Shanghai, China in 2001, and a Ph.D. degree in Computer Science from
+						University of Georgia, Athens, Georgia in 2014. His research is focused on brain imaging, computational neuroscience, and big data solutions for
+						medical data analysis.
+					</p>
+				</div>
+			</div>
+			<div class="Research">
+				<img class="img" src=""/>
+				<div class="nameDisp">
+					<h2 class="name">Our Research</h2>
+					<p class="disp">
+						Our research in MIND mainly focuses on the discovery of fundamental principles of brain structural and functional architectures and their relationship,
+						via brain imaging, computational modeling and machine learning methods. We are interested in the interaction between Artificial Intelligence (AI) and
+						Human Intelligence (HI): Using Deep Learning to facilitate the analysis and interpretation of brain data; Applying neuroscience knowledge to design more
+						efficient Deep Learning architectures. We also have strong interests in applying the discovered principles, theories and methods to better understand
+						neurodevelopmental, neurodegenerative and psychiatric disorders including Autism, Alzheimer’s disease, and Major Depression, among other brain conditions.
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Team -->
+		<div id="TeamWrapper">
+		</div>
+		<!-- // Team -->
+
+	</div>
+	<!-- // Main Wrapper -->
+	
+	<!-- Footer -->
+	<footer class="FooterWrapper">
+		
+	</footer>
+	<!-- // Footer -->
+	
+	<script>
+		// Initialize firebase
+		InitializeFirebase();
+		document.addEventListener('DOMContentLoaded', GetNews(), false);
+		document.addEventListener('DOMContentLoaded', GetMembers(), false);
+	</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+
+*
+{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Didact Gothic', sans-serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+.dark-mode {
+  background-color: rgba(1,1,1,0.9);
+  color: white;
+}
+
+.MainSidebar
+{
+	z-index: 1;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	margin-left: 0px;
+	overflow: hidden;
+	height: 100%;
+	width: 50px;
+	transition: 0.4s ease-in-out;
+}
+
+.MainSidebarOpen
+{
+	margin-left: 200px;
+}
+
+.MainSidebar .MenuAppearButton
+{
+	z-index: 1;
+	cursor: pointer;
+	position: relative;
+	top: 50%;
+	margin: 0 auto;
+	width: 30px;
+	height: 30px;
+}
+
+.MainSidebar .MenuAppearButton .Bar
+{
+	position: absolute;
+	top: 30%;
+	width: 30px;
+	height: 5px;
+	background-color: rgba(1,1,1,0.9);
+	border-radius: 5px;
+	transition: 0.2s ease-in-out;
+}
+
+.MainSidebar .MenuAppearButton .Bar::after
+{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 5px;
+	background-color: rgba(1,1,1,0.9);
+	border-radius: 5px;
+	transform: translateY(7px);
+	transition: 0.3s ease-in-out;
+}
+
+.MenuAppearButton:hover > .Bar
+{
+	width: 25px;
+}
+
+.MenuAppearButton:hover > .Bar::after
+{
+	width: 30px;
+}
+
+.MainMenu
+{
+	z-index: 1;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	background-color: rgba(1,1,1,0.9);
+	height: 100%;
+	width: 0px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	box-shadow: 0px 5px 5px rgba(1,1,1,0.9);
+	transition: 0.4s ease-in-out;
+}
+
+.MainMenuOpen
+{
+	width: 200px;
+}
+
+.MainMenu .Title
+{
+	position: absolute;
+	padding: 20px;
+	top: 15%;
+	left: 12%;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.MainMenu .Owner
+{
+	position: absolute;
+	padding: 20px;
+	top: 20%;
+	left: 12%;
+	font-size: 14px;
+}
+
+.MainMenu ul
+{
+	position: absolute;
+	top: 35%;
+	left: 12%;
+	list-style: none;
+}
+
+.MainMenu ul li
+{
+	padding: 20px;
+}
+
+.MainMenu ul li a
+{
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+	opacity: 0.9;
+	transition: 0.1s ease-in-out;
+}
+
+.MainMenu ul li a:hover
+{
+	margin-left: 3px;
+	color: white;
+	border-left: 2px solid white;
+	opacity: 1;
+	font-weight: bold;
+}
+
+.MainWrapper
+{
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin-left: 150px;
+	transition: 0.4s ease-in-out;
+}
+
+.MainWrapperShift
+{
+	margin-left: 320px;
+	width: 70%;
+}
+
+.MainWrapper .TextWrapper
+{
+	display: flex;
+	flex-direction: column;
+	text-align: justify;
+	margin-top: 150px;
+}
+
+.MainWrapper .TextWrapper .Director
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.MainWrapper .TextWrapper .Director img
+{
+	border-radius: 50%;
+	max-width: 20%;
+	box-shadow: 0px 0px 10px rgba(1,1,1,0.9);
+}
+
+.MainWrapper .TextWrapper .Director .nameDisp
+{
+	margin-left: 25px;
+}
+
+.MainWrapper .TextWrapper .Research
+{
+	margin-top: 25px;
+}
+
+.NewsWrapper
+{
+	margin: 0 auto;
+}
+
+.NewsWrapper #news p
+{
+	padding: 10px;
+	margin-top: 5px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(1,1,1,0.3);
+}
+
+#TeamWrapper
+{
+	display: flex;
+	justify-content: center;
+	margin-top: 15%;
+}
+
+#TeamWrapper #member
+{
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	margin: 10px 10px 10px 10px;
+	box-shadow: 0px 0px 5px rgba(1,1,1,0.1);
+}
+
+#TeamWrapper #member .memImg
+{
+	margin-bottom: 5%;
+	max-width: 60%;
+	border-radius: 70%;
+}
+
+#TeamWrapper #member .fa-envelope
+{
+	font-size: 15px;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+	background: rgba(1,1,1,0.5); 
+	border-radius: 10px;
+	transition: 0.2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+{
+	background: rgba(1,1,1,0.6); 
+}
+
+@media all and (max-width: 1024px)
+{
+	.MainWrapper
+	{
+		margin: 0 auto;
+	}
+	
+	.MainWrapper .TextWrapper .Director
+	{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.MainWrapper .TextWrapper .Director .nameDisp
+	{
+		margin-top: 30px;
+		margin-left: 0px;
+	}
+	
+	.MainWrapper .TextWrapper .Director img
+	{
+		max-width: 50%;
+	}
+	
+	#TeamWrapper
+	{
+		flex-direction: column;
+	}
+
+	#TeamWrapper #member
+	{
+		margin: 10px 0px 10px 0px;
+		align-items: center;
+	}
+
+	#TeamWrapper #member .memImg
+	{
+		max-width: 40%;
+		border-radius: 70%;
+	}
+}
+
+@media all and (max-width: 500px)
+{
+	.MainWrapper
+	{
+		margin-left: 70px;
+	}
+}
